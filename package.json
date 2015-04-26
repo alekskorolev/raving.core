@@ -1,0 +1,58 @@
+{
+  "name": "raving.core",
+  "version": "0.2.0",
+  "description": "Content management system Raving, core library",
+  "homepage": "https://github.com/alekskorolev/raving.core",
+  "main": "server/index.js",
+  "browser": "client/index.js",
+	"admin": "admin/index.js",
+  "dependencies": {
+    "angular": "^1.3.15",
+    "angular-route": "^1.3.15",
+    "async": "^0.9.0",
+    "bcrypt": "^0.8.2",
+    "body-parser": "^1.12.2",
+    "connect-multiparty": "^1.2.5",
+    "connect-redis": "^2.2.0",
+    "cookie": "^0.1.2",
+    "express": "^4.12.3",
+    "express-session": "^1.10.4",
+    "emailjs": "^0.3.13",
+    "jquery": "^2.1.3",
+    "jquery-ui": "^1.10.5",
+    "log4js": "^0.6.22",
+    "mongoose": "^3.9.7",
+    "mongoose-pagination": "^1.0.0",
+    "mongoose-regexp": "^0.0.1",
+    "mongoose-redis-cache": "^0.0.3",
+    "promised-io": "^0.3.5",
+    "socket.io": "^1.3.5",
+    "socket.io-client": "^1.3.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alekskorolev/raving.core.git"
+  },
+  "keywords": [
+    "raving",
+    "core",
+    "angular",
+    "express",
+    "socket.io",
+    "mongoose",
+    "cms"
+  ],
+  "author": {
+    "name": "Aleksandr Korolev",
+    "email": "mail@alesan.ru",
+    "url": "http://alesan.ru/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alekskorolev/raving.core/issues"
+  }
+}
