@@ -1,10 +1,13 @@
-var io = require('./io');
-var fileModel = require('./ng-file-model');
-var fileUpload = require('./ng-file-upload');
-var collectionFactory = require('./ng-collection-factory');
+/*jslint browser: true, devel: true, node: true, nomen: true, es5: true*/
+/*global  angular, $ */
+var io = require('./io'),
+  fileModel = require('./ng-file-model'),
+  fileUpload = require('./ng-file-upload'),
+  collectionFactory = require('./ng-collection-factory');
 module.exports = function (config) {
-	io();
-	fileModel(angular);
-	fileUpload(angular);
-	collectionFactory(angular);
-}
+  "use strict";
+  io();
+  fileModel(angular);
+  fileUpload(angular);
+  collectionFactory(angular);
+};

@@ -1,11 +1,13 @@
-
-var user = require('./user-model');
-var access = require('./access-model');
+/*jslint browser: true, devel: true, node: true, nomen: true, es5: true*/
+/*global  angular, $ */
+var user = require('./user-model'),
+  access = require('./access-model');
 module.exports = function (app) {
-	var log = app.get('logger')('raving.core/auth-access');
-	var orm = app.get('orm');
-	log.trace('Auth module init start');
-	var helper = app.get('helpers');
-	user(app);
-	access(app);
-}
+  "use strict";
+  var log = app.get('logger')('raving.core/auth-access'),
+    orm = app.get('orm'),
+    helper = app.get('helpers');
+  log.trace('Auth module init start');
+  user(app);
+  access(app);
+};
