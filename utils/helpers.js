@@ -13,18 +13,18 @@ module.exports = {
     if (!property) {
       return true;
     }
-    if (property instanceof String) {
-      property = property.slice('.');
+    if (typeof (property) === "string") {
+      property = property.split('.');
     } else {
       return false;
     }
     var exist = cntx, key;
-    for (key in cntx) {
-      if (cntx.hasOwnProperty(key)) {
-        exist = exist[cntx[key]];
-        if (!exist) {
+    for (key in property) {
+      if (property.hasOwnProperty(key)) {
+        if (exist[property[key]] === undefined) {
           return false;
         }
+        exist = exist[property[key]];
       }
     }
     return true;
@@ -46,10 +46,10 @@ module.exports = {
     var exist = cntx, key;
     for (key in property) {
       if (property.hasOwnProperty(key)) {
-        exist = exist[property[key]];
-        if (!exist) {
+        if (exist[property[key]] === undefined) {
           return false;
         }
+        exist = exist[property[key]];
       }
     }
     return exist;
